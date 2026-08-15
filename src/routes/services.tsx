@@ -8,20 +8,20 @@ import { services } from "@/lib/site";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "Landscaping, Paving & Fencing Services | Greenline Landscapes" },
+      { title: "Artificial Grass Revival & Garden Services | Artificial Grass Clean & Revive" },
       {
         name: "description",
         content:
-          "Garden landscaping, block paving driveways, fencing and gates, decking and turfing, garden walls and maintenance across Leeds and West Yorkshire.",
+          "Artificial grass cleaning and revival, pressure washing, garden maintenance, repointing, landscaping and paving across Glasgow and the surrounding areas.",
       },
       {
         property: "og:title",
-        content: "Landscaping, Paving & Fencing Services | Greenline Landscapes",
+        content: "Artificial Grass Revival & Garden Services | Artificial Grass Clean & Revive",
       },
       {
         property: "og:description",
         content:
-          "Six core services covering everything outdoors — design, paving, fencing, decking, walls and upkeep.",
+          "Artificial grass revival, pressure washing and a complete range of outdoor services for your garden.",
       },
     ],
   }),
@@ -38,12 +38,12 @@ function ServicesPage() {
               Our services
             </span>
             <h1 className="mt-4 text-4xl leading-tight text-forest sm:text-5xl">
-              Everything outdoors, built properly
+              Garden services that bring your space back to life
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Whether you want a complete garden redesign, a new block paved driveway or
-              simply a garden kept looking sharp all year, we handle the lot — with the
-              same standard of preparation, materials and finish on every job.
+              From artificial grass cleaning and revival to pressure washing, repointing,
+              landscaping and regular maintenance, we handle the work with care, quality equipment
+              and a tidy finish on every job.
             </p>
           </Reveal>
         </div>
@@ -68,9 +68,7 @@ function ServicesPage() {
                 <h2 className="mt-3 text-3xl leading-tight text-forest sm:text-4xl">
                   {service.title}
                 </h2>
-                <p className="mt-5 leading-relaxed text-muted-foreground">
-                  {service.long}
-                </p>
+                <p className="mt-5 leading-relaxed text-muted-foreground">{service.long}</p>
                 <h3 className="mt-8 text-base text-forest">What's included</h3>
                 <ul className="mt-4 space-y-3">
                   {service.includes.map((inc) => (

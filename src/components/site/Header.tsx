@@ -43,10 +43,10 @@ export function Header() {
           </span>
           <span className="min-w-0">
             <span className="block truncate font-display text-lg leading-tight text-forest">
-              Greenline
+              Artificial Grass
             </span>
             <span className="block text-[0.65rem] font-medium uppercase tracking-[0.18em] text-muted-foreground">
-              Landscapes
+              Clean & Revive
             </span>
           </span>
         </Link>

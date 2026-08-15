@@ -10,10 +10,10 @@ import {
   TreePine,
   Blocks,
   Scissors,
+  Waves,
   ArrowRight,
   Ruler,
   Hammer,
-  ClipboardList,
   HandHeart,
   Phone,
 } from "lucide-react";
@@ -37,20 +37,20 @@ import afterImg from "@/assets/after-garden.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Greenline Landscapes | Gardens, Driveways & Fencing in Leeds" },
+      { title: "Artificial Grass Clean & Revive | Glasgow" },
       {
         name: "description",
         content:
-          "Quality landscaping, block paving, fencing, decking and garden maintenance for homes across Leeds and West Yorkshire. Fully insured. Free quotes.",
+          "Artificial grass cleaning and revival, pressure washing, garden maintenance and outdoor services across Glasgow and the surrounding areas.",
       },
       {
         property: "og:title",
-        content: "Greenline Landscapes | Gardens, Driveways & Fencing in Leeds",
+        content: "Artificial Grass Clean & Revive | Glasgow",
       },
       {
         property: "og:description",
         content:
-          "Gardens, driveways and fencing, done beautifully. Fully insured landscapers serving Leeds and West Yorkshire.",
+          "Bring your garden back to life with artificial grass revival, pressure washing and garden care across Glasgow.",
       },
     ],
   }),
@@ -58,12 +58,15 @@ export const Route = createFileRoute("/")({
 });
 
 const serviceIcons = {
+  "artificial-grass": Sparkles,
+  "pressure-washing": Waves,
+  maintenance: Scissors,
+  repointing: Blocks,
   landscaping: Sprout,
   driveways: Layers,
   fencing: Fence,
   decking: TreePine,
   walls: Blocks,
-  maintenance: Scissors,
 } as const;
 
 const trustBar = [
@@ -75,24 +78,24 @@ const trustBar = [
 
 const whyUs = [
   {
-    icon: Hammer,
-    title: "Quality workmanship",
-    body: "Proper preparation, quality materials and a finish we're happy to put our name to.",
+    icon: HandHeart,
+    title: "Child and pet-friendly products",
+    body: "We use products and treatments chosen with family gardens and pets in mind.",
   },
   {
     icon: ShieldCheck,
-    title: "Fully insured & reliable",
-    body: "Fully insured on every job, and we turn up when we say we will.",
+    title: "A complete range of garden services",
+    body: "From artificial grass revival to pressure washing and maintenance, we help you get more from your garden.",
   },
   {
-    icon: ClipboardList,
-    title: "Clear quotes, honest advice",
-    body: "Itemised, no-obligation quotes with no surprises once we start.",
+    icon: Hammer,
+    title: "High-quality equipment and products",
+    body: "Every job is completed using professional equipment and quality products for lasting results.",
   },
   {
     icon: Sparkles,
-    title: "Clean, tidy sites",
-    body: "We tidy as we go, protect your property and leave the place spotless.",
+    title: "Fully insured & reliable",
+    body: "We turn up when we say we will, work tidily and leave your outdoor space looking its best.",
   },
 ];
 
@@ -104,13 +107,13 @@ const steps = [
   },
   {
     icon: Ruler,
-    title: "We design and agree the work",
-    body: "We'll talk through materials, layout and levels, then confirm the plan, price and start date in writing.",
+    title: "We assess and agree the work",
+    body: "We'll talk through the right clean, revive or garden-care service, then confirm the plan, price and start date.",
   },
   {
     icon: HandHeart,
-    title: "We build your dream outdoor space",
-    body: "Our team builds it to spec, keeps the site tidy day to day and walks you round the finished job.",
+    title: "We bring your garden back to life",
+    body: "Our team completes the agreed work with care, keeps the space tidy and walks you through the finished result.",
   },
 ];
 
@@ -121,7 +124,7 @@ function Home() {
       <section className="relative isolate overflow-hidden bg-forest">
         <img
           src={heroImg}
-          alt="Beautifully landscaped garden with sandstone patio, striped lawn and new slatted fencing at golden hour"
+          alt="Fresh, well-kept garden with artificial grass and patio"
           width={1920}
           height={1088}
           className="absolute inset-0 -z-10 size-full object-cover"
@@ -134,15 +137,15 @@ function Home() {
           <div className="max-w-2xl text-forest-foreground">
             <Reveal>
               <span className="inline-flex items-center gap-2 rounded-full border border-sand/30 bg-forest/40 px-4 py-1.5 text-xs font-semibold tracking-[0.16em] uppercase backdrop-blur-sm">
-                Leeds & West Yorkshire
+                Glasgow & surrounding areas
               </span>
               <h1 className="mt-6 text-4xl leading-[1.08] sm:text-5xl lg:text-6xl">
-                Gardens, Driveways &amp; Fencing,{" "}
-                <span className="text-leaf">Done Beautifully</span>
+                Artificial Grass Clean &amp; Revive,{" "}
+                <span className="text-leaf">Done Properly</span>
               </h1>
               <p className="mt-6 max-w-xl text-lg leading-relaxed text-forest-foreground/80">
-                Quality landscaping, paving and fencing for homes across Leeds and West
-                Yorkshire.
+                Bringing your garden back to life with artificial grass cleaning, pressure washing
+                and garden care across Glasgow and the surrounding areas.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" className="h-13 px-8 text-base shadow-lift">
@@ -173,9 +176,7 @@ function Home() {
               <span className="grid size-9 shrink-0 place-items-center rounded-lg bg-leaf/12">
                 <item.icon className="size-5 text-leaf-dark" aria-hidden="true" />
               </span>
-              <span className="min-w-0 text-sm font-semibold text-forest">
-                {item.label}
-              </span>
+              <span className="min-w-0 text-sm font-semibold text-forest">{item.label}</span>
             </li>
           ))}
         </ul>
@@ -186,8 +187,8 @@ function Home() {
         <Reveal>
           <SectionHeading
             eyebrow="What we do"
-            title="Complete outdoor transformations"
-            description="From full garden makeovers to driveways, fencing and regular upkeep — one trusted team for the whole of your outdoor space."
+            title="Garden care that makes a visible difference"
+            description="From artificial grass revival and pressure washing to regular upkeep, landscaping and paving — one trusted team for your outdoor space."
           />
         </Reveal>
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -200,9 +201,7 @@ function Home() {
                     <Icon className="size-6 text-leaf-dark" aria-hidden="true" />
                   </span>
                   <h3 className="mt-6 text-xl text-forest">{service.title}</h3>
-                  <p className="mt-3 grow leading-relaxed text-muted-foreground">
-                    {service.short}
-                  </p>
+                  <p className="mt-3 grow leading-relaxed text-muted-foreground">{service.short}</p>
                   <Link
                     to="/services"
                     hash={service.key}
@@ -226,8 +225,8 @@ function Home() {
               <SectionHeading
                 align="left"
                 eyebrow="Before & after"
-                title="See the difference proper work makes"
-                description="Drag the slider to reveal a tired Leeds back garden turned into a low-maintenance space the family actually use. Same footprint, completely different life — porcelain patio, fresh lawn, sleeper beds and new slatted fencing, all built on properly prepared ground."
+                title="See an artificial lawn brought back to life"
+                description="Drag the slider to reveal a tired artificial lawn transformed with a professional clean and revive. Moss, weeds and debris are removed, then the fibres are deep cleaned and powerbrushed to lift the surface and restore its fresh look."
               />
               <div className="mt-8 flex flex-col gap-3 sm:flex-row">
                 <Button asChild size="lg" className="h-13 px-7 text-base">
@@ -247,8 +246,8 @@ function Home() {
               <BeforeAfter
                 beforeImage={beforeImg}
                 afterImage={afterImg}
-                beforeAlt="Tired back garden before landscaping with patchy lawn and old fence panels"
-                afterAlt="The same garden after landscaping with porcelain patio, fresh lawn and new slatted fencing"
+                beforeAlt="Tired artificial grass before a professional clean and revival"
+                afterAlt="Artificial grass after cleaning, debris removal and powerbrushing"
               />
               <p className="mt-4 text-center text-sm text-muted-foreground">
                 Drag to reveal the transformation
@@ -261,10 +260,7 @@ function Home() {
       {/* e) Why choose us */}
       <section className="mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8">
         <Reveal>
-          <SectionHeading
-            eyebrow="Why choose us"
-            title="A landscaper you can actually rely on"
-          />
+          <SectionHeading eyebrow="Why choose us" title="Garden care you can rely on" />
         </Reveal>
         <ul className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {whyUs.map((item, i) => (
@@ -273,9 +269,7 @@ function Home() {
                 <item.icon className="size-6 text-leaf" aria-hidden="true" />
               </span>
               <h3 className="mt-5 text-lg text-forest">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                {item.body}
-              </p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{item.body}</p>
             </Reveal>
           ))}
         </ul>
@@ -289,7 +283,7 @@ function Home() {
               How it works
             </span>
             <h2 className="mt-3 text-3xl leading-tight sm:text-4xl">
-              Three simple steps to a better garden
+              Three simple steps to a fresher garden
             </h2>
           </Reveal>
           <ol className="mt-14 grid gap-8 md:grid-cols-3">
@@ -320,8 +314,8 @@ function Home() {
         <Reveal>
           <SectionHeading
             eyebrow="Our work"
-            title="Recently finished across Leeds"
-            description="A snapshot of gardens, driveways, fencing and decking we've completed for local homeowners."
+            title="Recently finished across Glasgow"
+            description="A snapshot of artificial grass revival, pressure washing and garden-care work completed for local homeowners."
           />
         </Reveal>
         <ul className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -364,7 +358,7 @@ function Home() {
           <Reveal>
             <SectionHeading
               eyebrow="Reviews"
-              title="What Leeds homeowners say"
+              title="What local homeowners say"
               description="Every quote we give is backed by work local families are happy to recommend."
             />
           </Reveal>

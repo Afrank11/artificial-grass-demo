@@ -7,17 +7,16 @@ import { reviews } from "@/lib/site";
 export const Route = createFileRoute("/reviews")({
   head: () => ({
     meta: [
-      { title: "Customer Reviews | Greenline Landscapes, Leeds" },
+      { title: "Customer Reviews | Artificial Grass Clean & Revive" },
       {
         name: "description",
         content:
-          "Rated 5 stars by homeowners across Leeds and West Yorkshire. Read reviews of our landscaping, driveway, fencing and decking work.",
+          "Read reviews of our artificial grass cleaning and revival, pressure washing and garden-care work across Glasgow and the surrounding areas.",
       },
-      { property: "og:title", content: "Customer Reviews | Greenline Landscapes, Leeds" },
+      { property: "og:title", content: "Customer Reviews | Artificial Grass Clean & Revive" },
       {
         property: "og:description",
-        content:
-          "5-star reviews from homeowners in Roundhay, Horsforth, Pudsey, Headingley and beyond.",
+        content: "5-star reviews from homeowners in Cambuslang, Alexandria, Renfrew and beyond.",
       },
     ],
   }),
@@ -34,7 +33,7 @@ function ReviewsPage() {
               Reviews
             </span>
             <h1 className="mt-4 text-4xl leading-tight text-forest sm:text-5xl">
-              Rated 5 stars by homeowners across Leeds
+              Rated 5 stars by homeowners across Glasgow
             </h1>
             <div className="mt-8 inline-flex flex-col items-center gap-3 rounded-2xl bg-card px-8 py-6 shadow-soft sm:flex-row sm:gap-6">
               <span className="font-display text-5xl text-forest">5.0</span>
@@ -46,8 +45,8 @@ function ReviewsPage() {
               </span>
             </div>
             <p className="mx-auto mt-8 max-w-xl leading-relaxed text-muted-foreground">
-              We've built this business on word of mouth around Leeds. Here's what local
-              homeowners say about the work, the price and the tidy-up.
+              We've built this business on word of mouth around Glasgow. Here's what local
+              homeowners say about the results, the price and the tidy-up.
             </p>
           </Reveal>
         </div>
@@ -63,10 +62,7 @@ function ReviewsPage() {
         </ul>
       </section>
 
-      <CtaBand
-        title="Want work you'd happily review?"
-        subtitle="Start with a free quote."
-      />
+      <CtaBand title="Want work you'd happily review?" subtitle="Start with a free quote." />
     </>
   );
 }

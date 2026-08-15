@@ -219,7 +219,7 @@ export function QuoteForm() {
               value={values.details}
               onChange={(e) => set("details", e.target.value)}
               rows={5}
-              placeholder="Tell us what you'd like doing — patio, turf, new fencing, driveway…"
+              placeholder="Tell us what you'd like doing — artificial grass cleaning, pressure washing, patio, fencing…"
               aria-invalid={!!errors.details}
               aria-describedby={errors.details ? "details-error" : undefined}
               className="mt-1.5"
@@ -240,8 +240,8 @@ export function QuoteForm() {
       <aside className="rounded-2xl bg-sand p-6 sm:p-8">
         <h3 className="font-display text-2xl text-forest">Prefer to talk?</h3>
         <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-          Call or WhatsApp us and we'll talk through your ideas, give honest advice and
-          book a free site visit at a time that suits you.
+          Call or WhatsApp us and we'll talk through the job, give honest advice and book a free
+          site visit at a time that suits you.
         </p>
         <div className="mt-6 grid gap-3">
           <Button asChild size="lg" className="h-13 justify-start text-base">

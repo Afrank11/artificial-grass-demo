@@ -10,20 +10,20 @@ import afterImg from "@/assets/after-garden.jpg";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery of Finished Gardens & Driveways | Greenline Landscapes" },
+      { title: "Gallery | Artificial Grass Clean & Revive" },
       {
         name: "description",
         content:
-          "Photos of completed landscaping, block paving, fencing and decking projects across Leeds and West Yorkshire, plus a before and after transformation.",
+          "See artificial grass revival, pressure washing, landscaping and garden-care work across Glasgow and the surrounding areas.",
       },
       {
         property: "og:title",
-        content: "Gallery of Finished Gardens & Driveways | Greenline Landscapes",
+        content: "Gallery | Artificial Grass Clean & Revive",
       },
       {
         property: "og:description",
         content:
-          "Browse finished gardens, driveways, fencing and decking built for homeowners across Leeds.",
+          "Browse artificial grass revival, pressure washing and garden-care transformations across Glasgow.",
       },
     ],
   }),
@@ -40,12 +40,12 @@ function GalleryPage() {
               Our work
             </span>
             <h1 className="mt-4 text-4xl leading-tight text-forest sm:text-5xl">
-              Finished projects across Leeds &amp; West Yorkshire
+              Finished projects across Glasgow &amp; surrounding areas
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Every photo below is a real job finished by our team — gardens, driveways,
-              patios, fencing and decking. The detail is in the preparation, the edges and
-              the tidy-up.
+              Every photo below shows the kind of care we bring to artificial grass, pressure
+              washing, gardens, patios, fencing and decking. The detail is in the preparation, the
+              finish and the tidy-up.
             </p>
           </Reveal>
         </div>
@@ -55,16 +55,16 @@ function GalleryPage() {
         <Reveal>
           <SectionHeading
             eyebrow="Transformation"
-            title="A tired garden, completely rebuilt"
-            description="Drag the slider to see the same garden before and after — new patio, lawn, sleeper beds and slatted fencing."
+            title="A tired artificial lawn, revived"
+            description="Drag the slider to see the difference a professional artificial grass clean and revival can make."
           />
         </Reveal>
         <Reveal delay={100} className="mx-auto mt-12 max-w-4xl">
           <BeforeAfter
             beforeImage={beforeImg}
             afterImage={afterImg}
-            beforeAlt="Back garden before landscaping with patchy lawn, cracked slabs and old fencing"
-            afterAlt="The same garden after landscaping with porcelain patio, fresh lawn and slatted fencing"
+            beforeAlt="Artificial grass before cleaning and revival"
+            afterAlt="Artificial grass after cleaning and powerbrushing"
           />
         </Reveal>
       </section>
@@ -101,10 +101,7 @@ function GalleryPage() {
         </div>
       </section>
 
-      <CtaBand
-        title="Like what you see?"
-        subtitle="Let's design yours next."
-      />
+      <CtaBand title="Like what you see?" subtitle="Let's bring your garden back to life." />
     </>
   );
 }

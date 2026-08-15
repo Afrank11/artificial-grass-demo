@@ -32,8 +32,8 @@ export function Footer() {
               <span className="font-display text-xl">{site.name}</span>
             </div>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-forest-foreground/70">
-              {site.tagline} Landscaping, paving, fencing and maintenance for homes
-              across Leeds and West Yorkshire.
+              {site.tagline} Artificial grass revival, pressure washing and garden care across
+              Glasgow and the surrounding areas.
             </p>
             <div className="mt-6 flex gap-3">
               <a

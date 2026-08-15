@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 import { Reveal } from "./Reveal";
 
 export function CtaBand({
-  title = "Ready to transform your outdoor space?",
+  title = "Ready to bring your garden back to life?",
   subtitle = "Get your free quote today.",
 }: {
   title?: string;
@@ -17,15 +17,15 @@ export function CtaBand({
         <Reveal className="mx-auto max-w-3xl text-center">
           <span className="inline-flex items-center gap-2 rounded-full bg-sand px-4 py-1.5 text-xs font-semibold tracking-wide text-sand-foreground uppercase">
             <Star className="size-3.5 fill-current" aria-hidden="true" />
-            Rated 5 stars by Leeds homeowners
+            Rated 5 stars by local homeowners
           </span>
           <h2 className="mt-6 text-3xl leading-tight sm:text-4xl md:text-5xl">
             {title}
             <span className="mt-2 block text-leaf">{subtitle}</span>
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-forest-foreground/70">
-            Tell us what you have in mind and we'll come out, measure up and give you a
-            clear, no-obligation price.
+            Tell us what you need and we'll come out, assess the work and give you a clear,
+            no-obligation price.
           </p>
           <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
             <Button asChild size="lg" className="h-13 px-8 text-base shadow-lift">

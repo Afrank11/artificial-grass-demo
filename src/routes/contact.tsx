@@ -8,20 +8,20 @@ import { site } from "@/lib/site";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Free Quotes | Greenline Landscapes, Leeds" },
+      { title: "Contact & Free Quotes | Artificial Grass Clean & Revive" },
       {
         name: "description",
         content:
-          "Call 0113 496 0123, WhatsApp or send us your project details for a free no-obligation landscaping, paving or fencing quote in Leeds and West Yorkshire.",
+          "Call 07700 900123, WhatsApp or send your details for a free no-obligation artificial grass revival, pressure washing or garden-care quote in Glasgow and the surrounding areas.",
       },
       {
         property: "og:title",
-        content: "Contact & Free Quotes | Greenline Landscapes, Leeds",
+        content: "Contact & Free Quotes | Artificial Grass Clean & Revive",
       },
       {
         property: "og:description",
         content:
-          "Get a free, no-obligation quote for landscaping, driveways, fencing or garden maintenance in Leeds.",
+          "Get a free, no-obligation quote for artificial grass cleaning, pressure washing, landscaping or garden maintenance in Glasgow.",
       },
     ],
   }),
@@ -62,13 +62,13 @@ function ContactPage() {
               Get in touch
             </span>
             <h1 className="mt-4 text-4xl leading-tight text-forest sm:text-5xl">
-              Let's talk about your outdoor space
+              Let's bring your garden back to life
             </h1>
             <p className="mt-5 text-lg leading-relaxed text-muted-foreground">
-              Tell us what you'd like doing and we'll arrange a convenient time to come
-              out, look at the space and talk through the options. Every quote is free,
-              itemised and completely no-obligation — and if there's a simpler or cheaper
-              way to get the result you want, we'll say so.
+              Tell us what you'd like doing and we'll arrange a convenient time to come out, look at
+              the space and talk through the options. Every quote is free, itemised and completely
+              no-obligation — whether you need artificial grass revived, pressure washing or a wider
+              garden service.
             </p>
           </Reveal>
         </div>
@@ -90,9 +90,7 @@ function ContactPage() {
                 <h2 className="mt-6 text-sm font-semibold tracking-wide text-muted-foreground uppercase">
                   {o.label}
                 </h2>
-                <p className="mt-2 font-display text-xl break-words text-forest">
-                  {o.value}
-                </p>
+                <p className="mt-2 font-display text-xl break-words text-forest">{o.value}</p>
                 <p className="mt-2 text-sm text-muted-foreground">{o.note}</p>
               </a>
             </Reveal>
@@ -128,10 +126,7 @@ function ContactPage() {
         </div>
       </section>
 
-      <section
-        id="quote"
-        className="border-t border-border bg-sand/50 py-16 sm:py-24"
-      >
+      <section id="quote" className="border-t border-border bg-sand/50 py-16 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <SectionHeading

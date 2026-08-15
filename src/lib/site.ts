@@ -6,46 +6,41 @@ import wallsImg from "@/assets/service-walls.jpg";
 import maintenanceImg from "@/assets/service-maintenance.jpg";
 import patioImg from "@/assets/gallery-patio.jpg";
 import afterImg from "@/assets/after-garden.jpg";
+import beforeImg from "@/assets/before-garden.jpg";
 
 // ---------------------------------------------------------------------------
-// !! UPDATE THIS AFTER YOUR FIRST DEPLOY !!
-// The canonical, absolute origin of the live site — no trailing slash.
-// Open Graph / Twitter cards require absolute URLs, so og:url and og:image are
-// built from this value in src/routes/__root.tsx. Until it matches the real
-// domain, link previews on WhatsApp/Facebook/LinkedIn will point at the wrong
-// host and the preview image will not load.
-// Replace with your Vercel URL (e.g. "https://landscaping-demo.vercel.app") or
-// your custom domain (e.g. "https://www.greenlinelandscapes.co.uk").
-// ---------------------------------------------------------------------------
-export const siteUrl = "https://landscaping-demo-opal.vercel.app";
+// Canonical public origin used for Open Graph and Twitter card URLs.
+// Update this value if the final Vercel or custom-domain URL changes.
+export const siteUrl = "https://artificial-grass-demo.vercel.app";
 
 // Social share card. Lives in /public, so it is served at `${siteUrl}${ogImage}`.
 export const ogImage = "/og-image.jpg";
 
 export const site = {
-  name: "Greenline Landscapes",
-  tagline: "Gardens, driveways and fencing, done beautifully.",
-  phoneDisplay: "0113 496 0123",
-  phoneHref: "tel:01134960123",
+  name: "Artificial Grass Clean & Revive",
+  tagline: "Bringing your garden back to life.",
+  phoneDisplay: "07700 900123",
+  phoneHref: "tel:07700900123",
   whatsappDisplay: "07700 900123",
-  whatsappHref:
-    "https://wa.me/447700900123?text=Hi%2C%20I%27d%20like%20a%20landscaping%20quote",
-  email: "hello@greenlinelandscapes.co.uk",
-  base: "Leeds, West Yorkshire",
+  whatsappHref: "https://wa.me/447700900123?text=Hi%2C%20I%27d%20like%20a%20free%20quote",
+  email: "hello@artificialgrasscleanrevive.co.uk",
+  base: "Glasgow",
   hours: "Mon–Fri 8am–6pm, Sat by arrangement",
-  areas:
-    "Leeds and West Yorkshire — Headingley, Roundhay, Horsforth, Chapel Allerton, Pudsey, Morley and surrounding areas.",
+  areas: "Glasgow, Lanarkshire, Dumbartonshire, Renfrewshire and Clydebank.",
   facebook: "https://facebook.com",
   instagram: "https://instagram.com",
 };
 
 export type ServiceKey =
+  | "artificial-grass"
+  | "pressure-washing"
+  | "maintenance"
+  | "repointing"
   | "landscaping"
   | "driveways"
   | "fencing"
   | "decking"
-  | "walls"
-  | "maintenance";
+  | "walls";
 
 export const services: {
   key: ServiceKey;
@@ -57,6 +52,70 @@ export const services: {
   image: string;
   alt: string;
 }[] = [
+  {
+    key: "artificial-grass",
+    icon: "Sparkles",
+    title: "Artificial Grass Cleaning & Revival",
+    short: "Deep cleaning, weed and debris removal, and powerbrushing to restore the fibres.",
+    long: "Bring a tired artificial lawn back to life. We remove moss, weeds and built-up debris, then deep clean and powerbrush the surface to lift the fibres and leave it looking fresh, clean and ready to enjoy.",
+    includes: [
+      "Moss, weed and debris removal",
+      "Deep clean for the artificial grass surface",
+      "Powerbrushing to lift and restore fibres",
+      "Freshen-up treatment using quality products",
+      "Child and pet-friendly care options",
+    ],
+    image: beforeImg,
+    alt: "Artificial grass ready for a professional clean and revival",
+  },
+  {
+    key: "pressure-washing",
+    icon: "Waves",
+    title: "Pressure Washing",
+    short: "Driveways, patios and decking jet washed back to looking new.",
+    long: "Our professional pressure washing service clears away grime, moss and surface build-up from driveways, patios and decking, bringing tired hard surfaces back to a clean, well-kept finish.",
+    includes: [
+      "Driveway and patio jet washing",
+      "Decking and paved-area cleaning",
+      "Moss, algae and grime removal",
+      "Careful cleaning around garden features",
+      "Tidy clear-up on completion",
+    ],
+    image: drivewayImg,
+    alt: "Driveway surface ready for professional pressure washing",
+  },
+  {
+    key: "maintenance",
+    icon: "Scissors",
+    title: "Garden Maintenance",
+    short: "Regular upkeep to keep outdoor spaces looking their best.",
+    long: "Keep your outdoor space looking cared for with regular maintenance or a one-off tidy-up. We handle mowing, edging, hedge cutting, weeding, pruning and seasonal clearance, with green waste taken away.",
+    includes: [
+      "Regular mowing, edging and strimming",
+      "Hedge cutting and shaping",
+      "Border weeding and pruning",
+      "Seasonal clear-ups and leaf clearance",
+      "Green waste removal included",
+    ],
+    image: maintenanceImg,
+    alt: "Neatly maintained garden with trimmed hedges and lawn",
+  },
+  {
+    key: "repointing",
+    icon: "Blocks",
+    title: "Repointing",
+    short: "Restoring patios and paved areas with clean, durable joints.",
+    long: "Loose or damaged joints can make patios and paved areas look tired and allow weeds to take hold. We remove failed pointing and restore the surface with clean, durable joints that help it look smart again.",
+    includes: [
+      "Patio and paved-area repointing",
+      "Removal of loose or failed jointing",
+      "Weed and debris clearance",
+      "Careful matching for a neat finish",
+      "Tidy clean-up after the job",
+    ],
+    image: patioImg,
+    alt: "Stone patio ready for professional repointing",
+  },
   {
     key: "landscaping",
     icon: "Sprout",
@@ -137,25 +196,13 @@ export const services: {
     image: wallsImg,
     alt: "Oak sleeper retaining wall and raised beds with ornamental planting",
   },
-  {
-    key: "maintenance",
-    icon: "Scissors",
-    title: "Garden Maintenance",
-    short: "Regular upkeep, tidy-ups and seasonal care.",
-    long: "Keep it looking as good as the day we finished. Regular visits or one-off blitzes — mowing, edging, hedge cutting, pruning, weeding and seasonal clearance, with all green waste taken away.",
-    includes: [
-      "Regular mowing, edging and strimming",
-      "Hedge cutting and shaping",
-      "Border weeding and pruning",
-      "Seasonal clear-ups and leaf clearance",
-      "Green waste removal included",
-    ],
-    image: maintenanceImg,
-    alt: "Immaculately maintained garden with striped mown lawn and trimmed hedges",
-  },
 ];
 
 export const serviceOptions = [
+  "Artificial Grass Cleaning & Revival",
+  "Pressure Washing",
+  "Garden Maintenance",
+  "Repointing",
   "Garden Landscaping",
   "Driveways & Paving",
   "Fencing & Gates",
@@ -178,39 +225,20 @@ export const timescales = [
 export const reviews = [
   {
     quote:
-      "Completely transformed our garden — new patio, turf and fencing. Absolutely delighted with the finish.",
+      "Brought our artificial lawn back to life, removed all the moss and debris, looks brand new. Brilliant job.",
     name: "Sarah H.",
-    area: "Roundhay",
+    area: "Cambuslang",
   },
   {
     quote:
-      "Block-paved driveway looks fantastic and was done on time with no mess. Proper professionals.",
+      "Pressure washed our decking and revived the artificial grass in one visit, garden looks fresh again.",
     name: "James M.",
-    area: "Horsforth",
+    area: "Alexandria",
   },
   {
-    quote:
-      "New fencing and decking, brilliant job, tidy every day and great value. Highly recommend.",
+    quote: "Fast, tidy and the results speak for themselves. Highly recommend.",
     name: "Priya K.",
-    area: "Pudsey",
-  },
-  {
-    quote:
-      "They designed the whole garden around how we actually use it. Sleeper beds and porcelain patio are superb.",
-    name: "David & Anne T.",
-    area: "Headingley",
-  },
-  {
-    quote:
-      "Quoted clearly, started when they said, finished when they said. Rare these days — and the work is lovely.",
-    name: "Michael O.",
-    area: "Chapel Allerton",
-  },
-  {
-    quote:
-      "Regular maintenance since last spring. The garden has never looked better and they're always tidy.",
-    name: "Helen W.",
-    area: "Morley",
+    area: "Renfrew",
   },
 ];
 
@@ -224,8 +252,8 @@ export const faqs = [
     a: "Yes, all quotes are free and no-obligation.",
   },
   {
-    q: "Do you do both gardens and driveways?",
-    a: "Yes, from landscaping and planting to paving, fencing and decking.",
+    q: "How often should artificial grass be cleaned?",
+    a: "We'd recommend a clean and revive once or twice a year to keep it looking its best and extend its lifespan.",
   },
   {
     q: "Do you keep the site tidy?",
@@ -233,7 +261,7 @@ export const faqs = [
   },
   {
     q: "What areas do you cover?",
-    a: "Leeds and the surrounding West Yorkshire area.",
+    a: "Glasgow, Lanarkshire, Dumbartonshire, Renfrewshire and Clydebank.",
   },
   {
     q: "How do I get started?",
@@ -244,42 +272,42 @@ export const faqs = [
 export const gallery = [
   {
     image: landscapingImg,
-    caption: "Full garden makeover — sandstone patio, circular lawn and pergola",
-    area: "Roundhay",
+    caption: "Garden landscaping and planting for a refreshed outdoor space",
+    area: "Glasgow",
   },
   {
     image: drivewayImg,
-    caption: "Charcoal block paved driveway with contrasting edge course",
-    area: "Horsforth",
+    caption: "Driveway pressure washing and surface restoration",
+    area: "Lanarkshire",
   },
   {
     image: fencingImg,
     caption: "New closeboard fencing with matching side gate",
-    area: "Pudsey",
+    area: "Dumbartonshire",
   },
   {
     image: deckingImg,
     caption: "Composite deck and glass balustrade with fresh turf",
-    area: "Headingley",
+    area: "Renfrewshire",
   },
   {
     image: wallsImg,
     caption: "Oak sleeper retaining beds and gravel path",
-    area: "Chapel Allerton",
+    area: "Clydebank",
   },
   {
     image: maintenanceImg,
     caption: "Seasonal maintenance — striped lawn and shaped hedging",
-    area: "Morley",
+    area: "Glasgow",
   },
   {
     image: patioImg,
-    caption: "Aged stone dining patio in a walled garden",
-    area: "Leeds city centre",
+    caption: "Patio repointing and pressure washing detail",
+    area: "Lanarkshire",
   },
   {
     image: afterImg,
-    caption: "Porcelain patio and artificial lawn for a low-maintenance garden",
-    area: "Morley",
+    caption: "Artificial grass clean and revive transformation",
+    area: "Renfrewshire",
   },
 ];

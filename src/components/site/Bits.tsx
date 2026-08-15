@@ -11,15 +11,7 @@ export function Stars({ className }: { className?: string }) {
   );
 }
 
-export function ReviewCard({
-  quote,
-  name,
-  area,
-}: {
-  quote: string;
-  name: string;
-  area: string;
-}) {
+export function ReviewCard({ quote, name, area }: { quote: string; name: string; area: string }) {
   return (
     <figure className="card-lift flex h-full flex-col rounded-2xl border border-border bg-card p-7 shadow-soft">
       <Stars />
@@ -28,7 +20,7 @@ export function ReviewCard({
       </blockquote>
       <figcaption className="mt-6 border-t border-border pt-5 text-sm">
         <span className="font-semibold text-foreground">{name}</span>
-        <span className="block text-muted-foreground">{area}, Leeds</span>
+        <span className="block text-muted-foreground">{area}</span>
       </figcaption>
     </figure>
   );
@@ -53,9 +45,7 @@ export function SectionHeading({
         </span>
       )}
       <h2 className="mt-3 text-3xl leading-tight text-forest sm:text-4xl">{title}</h2>
-      {description && (
-        <p className="mt-4 leading-relaxed text-muted-foreground">{description}</p>
-      )}
+      {description && <p className="mt-4 leading-relaxed text-muted-foreground">{description}</p>}
     </div>
   );
 }
